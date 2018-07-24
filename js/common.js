@@ -1,3 +1,24 @@
+$(function() {
+
+	/* Adaptive menu */
+
+    (function($){
+      $(function() {
+        $('.menu__icon').on('click', function() {
+          $(this).closest('.mob-wrap').toggleClass('menu_state_open');
+        });
+      });
+    })(jQuery);
+
+    /* Download file */
+
+   	$("#upfile1").click(function () {
+    	$("#file1").trigger('click');
+	});
+
+	/* Animation */
+
+	/* Left-scroll */
 
 	$(window).scroll(function(event){
 		var body = $('body').scrollTop();
@@ -66,3 +87,28 @@
 		$('html,body').animate({ scrollTop: topOffset }, 600);
 	});
 	
+
+	/* Chrome Smooth Scroll */ 
+
+	try {
+		$.browserSelector();
+		if($("html").hasClass("chrome")) {
+			$.smoothScroll();
+		}
+	} catch(err) {
+	};
+
+	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
+
+	/********** Pop-up-form **********/
+
+	// $(".order-call, .call").click(function() {
+	// 	$("#callback h4").html($(this).text());
+	// 	$("#callback input[name=formname]").val($(this).text());
+	// }).magnificPopup({
+	// 	type:"inline",
+	// 	mainClass: 'mfp-forms'
+	// });
+});
+
+
