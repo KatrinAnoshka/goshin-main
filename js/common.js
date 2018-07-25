@@ -6,6 +6,8 @@ $(function() {
       $(function() {
         $('.menu__icon').on('click', function() {
           $(this).closest('.mob-wrap').toggleClass('menu_state_open');
+          $('.header-right').toggleClass('hidden-div');
+          // $('.mob-wrap.menu_state_open').toggleClass('adaptive');
         });
       });
     })(jQuery);
@@ -37,47 +39,47 @@ $(function() {
 		$('.menu li a[href="#' + id + '"]').parent().addClass('active');
 		
 		
-		var top = $('.counter').offset().top-$(window).height();
+		// var top = $('.counter').offset().top-$(window).height();
 
-		if (top < body) {
-			if (counter == 0) {
-				counter = 1;
+		// if (top < body) {
+		// 	if (counter == 0) {
+		// 		counter = 1;
 				
 
-				$({
-					n: 0
-					}).animate({
-						n: count0
-					}, {
-					duration: 200E1,
-						step: function (a) {
-						$("#counter-0").html(a | 0)
-					}
-				});
+		// 		$({
+		// 			n: 0
+		// 			}).animate({
+		// 				n: count0
+		// 			}, {
+		// 			duration: 200E1,
+		// 				step: function (a) {
+		// 				$("#counter-0").html(a | 0)
+		// 			}
+		// 		});
 
-				$({
-					n: 0
-					}).animate({
-						n: count1
-					}, {
-					duration: 200E1,
-						step: function (a) {
-						$("#counter-1").html(a | 0)
-					}
-				});	
-				$({
-					n: 0
-					}).animate({
-						n: count2
-					}, {
-					duration: 200E1,
-						step: function (a) {
-						$("#counter-2").html(a | 0)
-					}
-				});				
+		// 		$({
+		// 			n: 0
+		// 			}).animate({
+		// 				n: count1
+		// 			}, {
+		// 			duration: 200E1,
+		// 				step: function (a) {
+		// 				$("#counter-1").html(a | 0)
+		// 			}
+		// 		});	
+		// 		$({
+		// 			n: 0
+		// 			}).animate({
+		// 				n: count2
+		// 			}, {
+		// 			duration: 200E1,
+		// 				step: function (a) {
+		// 				$("#counter-2").html(a | 0)
+		// 			}
+		// 		});				
 
-			}
-		}
+		// 	}
+		// }
 
 	});
 	
@@ -86,6 +88,7 @@ $(function() {
 		var topOffset = $($(this).attr('href')).offset().top-$('header .fix-menu').outerHeight();
 		$('html,body').animate({ scrollTop: topOffset }, 600);
 	});
+	
 	
 
 	/* Chrome Smooth Scroll */ 
