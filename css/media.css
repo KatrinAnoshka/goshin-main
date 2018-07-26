@@ -4,22 +4,19 @@
 @media only screen and (max-width : 1200px) {
 	/*Header-section*/
 	.header-wrap {
-		-webkit-flex-wrap: wrap;
-		-moz-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		-o-flex-wrap: wrap;
 		flex-wrap: wrap;
 	}
 	.child--featured {
-		order: 1;
+		-webkit-box-ordinal-group: 2;
+		    -ms-flex-order: 1;
+		        order: 1;
 		width: 100%;
-		margin: 10px auto 0;
+		margin: 0 auto;
 	}
-
 	/*Section-number*/
 	.number-wrap {
-		-webkit-flex-wrap: wrap;
-		-moz-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		-o-flex-wrap: wrap;
 		flex-wrap: wrap;
@@ -32,8 +29,6 @@
 	}
 	/*Section-advantages*/
 	.adv-items-2 {
-		-webkit-flex-wrap: wrap;
-		-moz-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		-o-flex-wrap: wrap;
 		flex-wrap: wrap;
@@ -53,8 +48,6 @@
 @media only screen and (max-width : 834px) {
 	/*Section-work*/
 	.work-items {
-		-webkit-flex-wrap: wrap;
-		-moz-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		-o-flex-wrap: wrap;
 		flex-wrap: wrap;
@@ -78,15 +71,20 @@
 	.number-item {
 		width: 33%;
 		-ms-align-items: center;
-		align-items: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 	}
 	.number-item span {
 		text-align: center;
 	}
 	/*Section-partners*/
 	.partners-main {
-		flex-wrap: wrap;
-    	justify-content: center;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+    	-webkit-box-pack: center;
+    	    -ms-flex-pack: center;
+    	        justify-content: center;
 	}
 	.partners-item {
 		width: 45%;
@@ -96,11 +94,12 @@
 	}
 	/*Section-footer*/
 	.section-footer {
-		-webkit-flex-direction: column;
 		-moz-flex-direction: column;
 		-ms-flex-direction: column;
 		-o-flex-direction: column;
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		        flex-direction: column;
 	}
 	.scls-footer {
 		padding: 20px 0;
@@ -114,26 +113,17 @@
 	.animated {
 		/*CSS transitions*/
 		-o-transition-property: none !important;
-		-moz-transition-property: none !important;
-		-ms-transition-property: none !important;
 		-webkit-transition-property: none !important;
 		transition-property: none !important;
 		/*CSS transforms*/
-		-o-transform: none !important;
-		-moz-transform: none !important;
 		-ms-transform: none !important;
 		-webkit-transform: none !important;
 		transform: none !important;
 		/*CSS animations*/
 		-webkit-animation: none !important;
-		-moz-animation: none !important;
-		-o-animation: none !important;
-		-ms-animation: none !important;
 		animation: none !important;
 	}
-
 	/*Header-bg */
-
 	.logo {
 	    width: 400px;
 	    padding-bottom: 3em;
@@ -165,8 +155,7 @@
 	}
 	.debtor-main {
 		padding: 4em 1.5em;
-	}
-	
+	}	
 	/*Section-number*/
 	.number-wrap {
 		padding: 4em 1.5em;
@@ -230,12 +219,12 @@
 	}
 	.samples-main {
 		padding: 4em 1.5em 5em;
-		-webkit-flex-wrap: wrap;
-		-moz-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		-o-flex-wrap: wrap;
 		flex-wrap: wrap;
-		justify-content: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 	}
 	.samples-item {
 		width: 40%;
@@ -250,7 +239,6 @@
 	.scroll {
 	    display: none;
 	}
-
 }
 
 @media only screen and (max-width : 650px) {
@@ -263,12 +251,11 @@
 		display: none;    
 	}
 	.child--featured-1 {
-		order: 1;
+		-webkit-box-ordinal-group: 2;
+		    -ms-flex-order: 1;
+		        order: 1;
 		position: relative;
     	bottom: 35px;
-	}
-	.header-left {
-		padding-left: 0;
 	}
 	.header-wrap {
 		height: 125px;
@@ -278,11 +265,12 @@
 	}
 	/*Section-debtor*/
 	.debtor-items {
-		-webkit-flex-direction: column;
 		-moz-flex-direction: column;
 		-ms-flex-direction: column;
 		-o-flex-direction: column;
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		        flex-direction: column;
 	}
 	.item-deb-1 {
 		margin-bottom: 3em;
@@ -297,12 +285,12 @@
 	.section-partners h2 {
 		margin-bottom: 1.5em;
 	}
-	/*Section-apply*/
-	
+	/*Section-apply*/	
 	.form-apply input::-webkit-input-placeholder {
 	  color: transparent;
 	}
 }
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 500px) {
 	/*Header-bg */
@@ -351,8 +339,6 @@
 		font-size: 3em;
 	}
 	.adv-items-1 {
-		-webkit-flex-wrap: wrap;
-		-moz-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		-o-flex-wrap: wrap;
 		flex-wrap: wrap;
@@ -387,8 +373,13 @@
 	}
 	/*Section-apply*/
 	.form-apply label {
-		flex-direction: column;
-    	align-items: flex-start;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+    	-webkit-box-align: start;
+    	    -ms-flex-align: start;
+    	        align-items: flex-start;
 	}
 	.form-apply input,
 	.label-file {
@@ -424,16 +415,14 @@
 @media only screen and (max-width : 400px) {
 	/*Header-section*/
 	.phone-wrap {
-		-webkit-flex-wrap: wrap;
-		-moz-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		-o-flex-wrap: wrap;
 		flex-wrap: wrap;
+		padding-right: 24px;
 	}
 	.phone1, .phone2 {
-		font-size: 1.5em!important;
+		font-size: 1.6em!important;
 	}
-
 	.mode {
 		padding-top: 10px;
 	}
@@ -444,7 +433,6 @@
 		padding-right: 0;
 	}
 }
-
 
 /*==========  Mobile First Method  ==========*/
 
