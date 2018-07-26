@@ -53,7 +53,7 @@ $(function() {
 			}, 200*index);
 		});
 	}, {
-		offset : "30%"
+		offset : "50%"
 	});
 
 	/* Section-numbers animation */
@@ -66,7 +66,7 @@ $(function() {
 			}, 200*index);
 		});
 	}, {
-		offset : "30%"
+		offset : "50%"
 	});
 
 	/* Animation */

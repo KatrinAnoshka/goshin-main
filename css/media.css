@@ -203,7 +203,7 @@
 	.form-apply {
 		padding: 1em 1.5em 4em;
 	}
-	#data-input {
+	.data-input {
 		margin-right: 0;
 	}
 	.agree {
@@ -385,7 +385,7 @@
 	.label-file {
 		margin-top: 10px;
 	}
-	#data-input {
+	.data-input {
 		margin-left: 0;
 	}
 	/*Section-samples*/
